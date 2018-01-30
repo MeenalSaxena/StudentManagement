@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-3"></div>
+  	<div class="col-md-6">
+        <center>
+        
+            <h1>Form</h1>
+        </center>
+        
+        <form action="" method="post">
+            <div class="form-group">
+                
+                <label>Name:</label>
+                <input type="text" name="name" class="form-control" placeholder="Name" ng-model="person.SName" required>
+                <label>Subject</label>
+                <select name="subject" class="form-control" ng-model="person.SSubject" required>
+                    <option value="C">C</option>
+                    <option value="Cplusplus">C++</option>
+                    <option value="Corejava">Core Java</option>
+                    <option value="Advancejava">Advance Java</option>
+                    <option value="WebDesgining">Web Desgining</option>
+                    <option value="Angular">Angular Js</option>
+                    <option value="Node">Node JS</option>
+                    <option value="Meanstack">MEAN Stack</option>
+                </select>
+                <label>Contact.No:</label>
+                <input type="text" name="contact" class="form-control" placeholder="Contact.No" ng-model="person.SContact" required>
+                <label>Source:</label>
+                <input type="text" name="source" class="form-control" placeholder="Source" ng-model="person.SSource"required >
+                <label>Next Call:</label>
+                <input type="date" name="nextcall" class="form-control" ng-model="person.SCall" required>
+        
+                <br>
+                <br>
+        
+        
+                <center>
+                    <button type="button" class="btn btn-default" ng-click="submit()">Submit</button>
+                </center>
+        
+        
+        
+        
+        
+            </div>
+        </form>
+</div>
+  	<div class="col-md-3">
+                    
+      </div>
+
+
+
+  </div><!--row div-->
+  
+</div><!--container div-->
+<div class="container" ng-if="info.length" >
+
+
+    <table class="table table-striped table-bordered " >
+        <tr>
+            <th>Serial.No</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Subject</th>
+            <th>Source</th>
+            <th>Next</th>
+        </tr>
+    
+        <tr ng-repeat="student in info">
+            <th>{{student.SID}}</th>
+            <th>{{student.SName }}</th>
+            <th>{{student.SContact}}</th>
+            <th>{{student.SSubject}}</th>
+            <th>{{student.SSource}}</th>
+            <th>{{student.SCall|date:'yyyy-MM-dd'}}</th>
+        </tr>
+        </center>
+    </table>
+</div>

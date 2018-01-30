@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WEB BHUMI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+</head>
+<body ng-app="myApp" style="background-color:antiquewhite">
+    
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!--<div class="navbar-header">
+                <a class="navbar-brand" "active" href="#!/">Web Bhumi</a>
+            </div>-->
+            <ul class="nav navbar-nav">
+                <li>
+                     <a href="#!/form">Form</a>
+                </li>
+                <li>
+                    <a href="#!/search">Search</a>
+                </li>
+               
+                <li>
+                    <a href="#!/enquiry">Enquiry Form</a>
+                </li>
+                <li>
+                    <a href="#!/registration">Registration Form</a>
+                </li>
+                <li>
+                    <a href="#!/update">Update</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div ng-view class="container"></div>
+
+
+<script src="angular.js"></script>
+<script src="angular-route.min.js"></script>
+<script src="index.js"></script>
+<script src="other/1/form.js"></script>
+<script src="other/2/get.js"></script>
+
+</body>
+<!--"other/3/enquiry.js"
+"other/4/regis.js"
+-->
+</html>
