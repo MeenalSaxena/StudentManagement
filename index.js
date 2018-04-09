@@ -1,4 +1,24 @@
-var app = angular.module("myApp", ["ngRoute"]);
+var app = angular.module("myApp", ["ngRoute","firebase"]);
+
+
+app.factory("Profile", ["$firebaseObject",
+function($firebaseObject) {
+  return function(username) {
+    // create a reference to the database node where we will store our data
+    // var ref = firebase.database().ref("test").push("student");
+    var ref = firebase.database().ref("test").push();
+    var profileRef = ref.child(username);
+
+    // return it as a synchronized object
+    return $firebaseObject(profileRef);
+  }
+}
+]);
+
+
+
+
+
 app.config(function ($routeProvider) {
   $routeProvider.when("/form", {
             templateUrl:"other/1/index1.html",

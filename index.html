@@ -43,9 +43,33 @@
 
 <script src="angular.js"></script>
 <script src="angular-route.min.js"></script>
+
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+<script>
+        // Initialize the Firebase SDK
+        var config = {
+            apiKey: "AIzaSyAXOBJU0YZG_UDjUD_mrcDzyLzOL5-kySM",
+            authDomain: "dbtest-e7cef.firebaseapp.com",
+            databaseURL: "https://dbtest-e7cef.firebaseio.com",
+            projectId: "dbtest-e7cef",
+            storageBucket: "dbtest-e7cef.appspot.com",
+            messagingSenderId: "161866072974",
+            
+        
+        };
+        firebase.initializeApp(config);
+      </script>
+      
 <script src="index.js"></script>
 <script src="other/1/form.js"></script>
 <script src="other/2/get.js"></script>
+
 
 </body>
 <!--"other/3/enquiry.js"
